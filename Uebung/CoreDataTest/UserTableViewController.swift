@@ -12,8 +12,7 @@ import CoreData
 class UserTableViewController: UITableViewController {
     
     // MARK: - Context initialisieren
-   
-    
+  
     
     
     var users : [NSManagedObject] = [] {
@@ -27,7 +26,7 @@ class UserTableViewController: UITableViewController {
       
     // MARK: - User laden, um die Tabelle beim Starten der App mit Daten zu füllen
 
-        
+       
         
         
     }
@@ -43,6 +42,7 @@ class UserTableViewController: UITableViewController {
     func createUser(name: String, password: String) {
         
       
+        
     }
 
     
@@ -50,53 +50,52 @@ class UserTableViewController: UITableViewController {
         
         // MARK: - Test-Benutzer erstellen mit der createUser()
               
-        
-        
+
         
    
         print("Users created")
         
         
-    // MARK: - Bonus: Test-Benutzer erstellen mit der createUser() und dem Alert-Fenster
-          let alert = UIAlertController(title: "New User",
-                                        message: "Add a new user",
-                                        preferredStyle: .alert)
-
-        alert.addTextField { (usernameTextField) in
-            usernameTextField.placeholder = "Username eingeben"
-        }
-
-        alert.addTextField { (ageTextField) in
-            ageTextField.placeholder = "Passwort eingeben"
-
-              }
-
-          let saveAction = UIAlertAction(title: "Save",
-                                         style: .default) {
-            (saveAction) in
-
-
-        // MARK: - createUser() aufrufen mit den Inhalten der Textfelder
-        // Zugriff auf erstes Textfeld mit (alert.textFields?.first?.text!)!
-        // und zweites Textfeld mit (alert.textFields?.last?.text!)!
-        
-
-        
-                                            
-                                            
-        print("Users created")
-
-          }
-
-          let cancelAction = UIAlertAction(title: "Cancel",
-                                           style: .cancel)
-
-
-        alert.addAction(saveAction)
-          alert.addAction(cancelAction)
-
-          present(alert, animated: true)
-        
+//    // MARK: - Bonus: Test-Benutzer erstellen mit der createUser() und dem Alert-Fenster
+//          let alert = UIAlertController(title: "New User",
+//                                        message: "Add a new user",
+//                                        preferredStyle: .alert)
+//
+//        alert.addTextField { (usernameTextField) in
+//            usernameTextField.placeholder = "Username eingeben"
+//        }
+//
+//        alert.addTextField { (ageTextField) in
+//            ageTextField.placeholder = "Passwort eingeben"
+//
+//              }
+//
+//          let saveAction = UIAlertAction(title: "Save",
+//                                         style: .default) {
+//            (saveAction) in
+//
+//
+//        // MARK: - createUser() aufrufen mit den Inhalten der Textfelder
+//        // Zugriff auf erstes Textfeld mit (alert.textFields?.first?.text!)!
+//        // und zweites Textfeld mit (alert.textFields?.last?.text!)!
+//
+//
+//
+//
+//
+//        print("Users created")
+//
+//          }
+//
+//          let cancelAction = UIAlertAction(title: "Cancel",
+//                                           style: .cancel)
+//
+//
+//        alert.addAction(saveAction)
+//          alert.addAction(cancelAction)
+//
+//          present(alert, animated: true)
+//
         
     
     }
@@ -106,12 +105,14 @@ class UserTableViewController: UITableViewController {
     // MARK: - loadUsers() implementieren
       func loadUsers() {
         
-         
+   
+        
       }
     
     
     // MARK: - Bonus: Mit Predicate nur Benutzer mit Namen "Herbert" laden
     func loadSpecificUsers() {
+        
         
       
     }
