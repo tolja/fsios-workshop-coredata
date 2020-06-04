@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                      }
         
     
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
     }
 
     
