@@ -15,22 +15,15 @@ class UserTableViewController: UITableViewController {
   
     
     
+    // MARK: - Definition des Datenmodells in der .xcdatamodeld nicht vergessen
+    
     var users : [NSManagedObject] = [] {
         didSet {
             tableView.reloadData()
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      
-    // MARK: - User laden, um die Tabelle beim Starten der App mit Daten zu füllen
-
-       
-        
-        
-    }
-
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,22 +95,24 @@ class UserTableViewController: UITableViewController {
     
     
 
-    // MARK: - loadUsers() implementieren
-      func loadUsers() {
+    // MARK: - fetchUsers() implementieren
+      func fetchUsers() {
         
    
         
       }
     
     
-    // MARK: - Bonus: Mit Predicate nur Benutzer mit Namen "Herbert" laden
-    func loadSpecificUsers() {
+   override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(animated)
+       
+     // MARK: - User mit der fetchUsers() laden, um die Tabelle beim Starten der App mit Daten zu füllen
+
         
-        
-      
-    }
-    
-   
+         
+         
+     }
+
   
     
     @IBAction func loadUsers(_ sender: UIBarButtonItem) {
@@ -125,7 +120,7 @@ class UserTableViewController: UITableViewController {
         
          // MARK: - richtige Methode laden
         
-           loadUsers()
+           fetchUsers()
         
            //loadSpecificUsers()
              
@@ -134,6 +129,14 @@ class UserTableViewController: UITableViewController {
            
            
        
+       }
+    
+    
+    // MARK: - Bonus: Mit Predicate nur Benutzer mit Namen "Herbert" laden
+       func fetchSpecificUsers() {
+           
+           
+         
        }
     
     
